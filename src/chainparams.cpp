@@ -72,7 +72,7 @@ public:
         //vSeeds.push_back(CDNSSeedData("digiexplorer.info seed #5", "seed5.digiexplorer.info"));
 
         base58Prefixes[PUBKEY_ADDRESS] = list_of(30);
-        base58Prefixes[SCRIPT_ADDRESS] = list_of(5);
+        base58Prefixes[SCRIPT_ADDRESS] = list_of(49);
         base58Prefixes[SECRET_KEY] =     list_of(0x9e);
         base58Prefixes[EXT_PUBLIC_KEY] = list_of(0x04)(0x88)(0xB2)(0x1E);
         base58Prefixes[EXT_SECRET_KEY] = list_of(0x04)(0x88)(0xAD)(0xE4);
