@@ -3,8 +3,6 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "walletview.h"
-#include "exchangebrowser.h"
-#include "chatwindow.h"
 #include "addressbookpage.h"
 #include "askpassphrasedialog.h"
 #include "bitcoingui.h"
@@ -42,9 +40,7 @@ WalletView::WalletView(QWidget *parent):
 	//parent->setStyleSheet("#MainWindow{border-image: url(:/images/wallet) 0 0 0 0 stretch stretch;}");
     // Create tabs
     overviewPage = new OverviewPage();
-	chatWindow = new ChatWindow(this);
-	exchangeBrowser = new ExchangeBrowser(this);
-	blockBrowser = new BlockBrowser(this);
+    blockBrowser = new BlockBrowser(this);
 
     transactionsPage = new QWidget(this);
     QVBoxLayout *vbox = new QVBoxLayout();
@@ -68,10 +64,7 @@ WalletView::WalletView(QWidget *parent):
     addWidget(transactionsPage);
     addWidget(receiveCoinsPage);
     addWidget(sendCoinsPage);
-	addWidget(chatWindow);
-	addWidget(exchangeBrowser);
-	addWidget(blockBrowser);
-
+    addWidget(blockBrowser);
 
     // Clicking on a transaction on the overview pre-selects the transaction on the transaction history page
     connect(overviewPage, SIGNAL(transactionClicked(QModelIndex)), transactionView, SLOT(focusTransaction(QModelIndex)));
@@ -144,8 +137,7 @@ void WalletView::setWalletModel(WalletModel *walletModel)
     overviewPage->setWalletModel(walletModel);
     receiveCoinsPage->setModel(walletModel);
     sendCoinsPage->setModel(walletModel);
-	//exchangeBrowser->setModel(walletModel);
-    //chatWindow->setModel(walletModel);
+
     if (walletModel)
     {
         // Receive and pass through messages from wallet model
@@ -192,17 +184,6 @@ void WalletView::gotoHistoryPage()
 {
 	setCurrentWidget(transactionsPage);
 }
-
-void WalletView::gotoExchangeBrowserPage()
-{
-    setCurrentWidget(exchangeBrowser);
-}
-
-void WalletView::gotoChatPage()
-{
-    setCurrentWidget(chatWindow);
-}
-
 
 void WalletView::gotoBlockBrowserPage()
 {

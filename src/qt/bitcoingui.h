@@ -16,8 +16,6 @@
 class ClientModel;
 class Notificator;
 class RPCConsole;
-class ExchangeBrowser;
-class ChatWindow;
 class BlockBrowser;
 class SendCoinsRecipient;
 class WalletFrame;
@@ -79,10 +77,7 @@ private:
     QProgressBar *progressBar;
 
     QMenuBar *appMenuBar;
-	QAction *chatAction;
-	QAction *reloadUiAction;
-	QAction *exchangeAction;
-	QAction *blockAction;
+    QAction *blockAction;
     QAction *overviewAction;
     QAction *historyAction;
     QAction *quitAction;
@@ -170,23 +165,16 @@ private slots:
     void reloadUi();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
-	/** Switch to chat page */
-    void gotoChatPage();
-	/** Switch to exchange browser page */
-    void gotoExchangeBrowserPage();
     /** Switch to Block Browser Page */
-    void gotoBlockBrowserPage(); 
-	
+    void gotoBlockBrowserPage(); 	
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
-
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
-
     /** Show open dialog */
     void openClicked();
 #endif

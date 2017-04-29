@@ -93,8 +93,6 @@ QT_FORMS_UI = \
   forms/editaddressdialog.ui \
   forms/helpmessagedialog.ui \
   forms/intro.ui \
-  forms/chatwindow.ui \
-  forms/exchangebrowser.ui \
   forms/openuridialog.ui \
   forms/optionsdialog.ui \
   forms/overviewpage.ui \
@@ -120,8 +118,6 @@ QT_MOC_CPP = \
   moc_coincontroltreewidget.cpp \
   moc_csvmodelwriter.cpp \
   moc_editaddressdialog.cpp \
-  moc_exchangebrowser.cpp \
-  moc_chatwindow.cpp \
   moc_guiutil.cpp \
   moc_intro.cpp \
   moc_macdockiconhandler.cpp \
@@ -142,7 +138,6 @@ QT_MOC_CPP = \
   moc_rpcconsole.cpp \
   moc_sendcoinsdialog.cpp \
   moc_sendcoinsentry.cpp \
-  moc_serveur.cpp \
   moc_signverifymessagedialog.cpp \
   moc_splashscreen.cpp \
   moc_trafficgraphwidget.cpp \
@@ -190,8 +185,6 @@ BITCOIN_QT_H = \
   guiconstants.h \
   guiutil.h \
   intro.h \
-  exchangebrowser.h \
-  chatwindow.h \
   intro.h \
   macdockiconhandler.h \
   macnotificationhandler.h \
@@ -212,7 +205,6 @@ BITCOIN_QT_H = \
   rpcconsole.h \
   sendcoinsdialog.h \
   sendcoinsentry.h \
-  serveur.h \
   signverifymessagedialog.h \
   splashscreen.h \
   trafficgraphwidget.h \
@@ -284,8 +276,6 @@ BITCOIN_QT_CPP = \
   csvmodelwriter.cpp \
   guiutil.cpp \
   intro.cpp \
-  exchangebrowser.cpp \
-  chatwindow.cpp \
   monitoreddatamapper.cpp \
   notificator.cpp \
   optionsdialog.cpp \
@@ -317,7 +307,6 @@ BITCOIN_QT_CPP += \
   recentrequeststablemodel.cpp \
   sendcoinsdialog.cpp \
   sendcoinsentry.cpp \
-  serveur.cpp \
   signverifymessagedialog.cpp \
   transactiondesc.cpp \
   transactiondescdialog.cpp \

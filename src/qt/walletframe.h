@@ -53,23 +53,19 @@ public slots:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
     /** Switch to history (transactions) page */
-    void gotoHistoryPage();
-	/** Switch to chat page */
-    void gotoChatPage();
-	/** Switch to exchange browser page */
-    void gotoExchangeBrowserPage();	
+    void gotoHistoryPage();	
     /** Switch to receive coins page */
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage(QString addr = "");
-
+    /** Switch to block browser page **/
     void gotoBlockBrowserPage(); 
-	void reloadUi();
+    /** reload interface **/
+    void reloadUi();
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");
     /** Show Sign/Verify Message dialog and switch to verify message tab */
     void gotoVerifyMessageTab(QString addr = "");
-
     /** Encrypt the wallet */
     void encryptWallet(bool status);
     /** Backup the wallet */
@@ -78,7 +74,6 @@ public slots:
     void changePassphrase();
     /** Ask for passphrase to unlock wallet temporarily */
     void unlockWallet();
-
     /** Show used sending addresses */
     void usedSendingAddresses();
     /** Show used receiving addresses */
